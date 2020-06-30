@@ -41,7 +41,7 @@ def start():            # the function to start game
     global playing 
     if playing == False:
         playing = True
-        t.clear() #메세지를 지웁니다.
+        t.clear()       #clear the message
         play() 
 
 def play():             # the function to play game
