@@ -77,14 +77,9 @@ def play():             # the function to play game
     if t.distance(ts) < 12:     
         score = score + 1    
         t.write(score)    # show the score
-
-        # if food color is "yellow" then player speed "UP"
-        if ts.color() == ('yellow', 'yellow'):
-            player_speed = player_speed + 2
         
-        # food color is yellow(1 over 3 percentage)
-        yellow_random = random.randint(1,3)
-        if yellow_random == 2:
+        # food color is yellow(1 over 3 percentage
+        if random.randint(1,3) == 2:
             ts.color("yellow")
         # otherwise food color is green
         else:
@@ -92,6 +87,10 @@ def play():             # the function to play game
         star_x = random.randint(-230, 230)
         star_y = random.randint(-230, 230)
         ts.goto(star_x, star_y) # move food random x, y location
+        
+        # if food color is "yellow" then player speed "UP"
+        if ts.color() == ('yellow', 'yellow'):
+            player_speed = player_speed + 2
 
     # if playing status is "True", then play() after 0.1 seconds
     if playing:     
